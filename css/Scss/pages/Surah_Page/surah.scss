@@ -1,0 +1,39 @@
+// My FrameWork
+@use '../../helpers/frameWork' as *;
+// Variables In All Pages
+@use '../../helpers/variables' as *;
+// Navbar In All Pages
+@use '../../in-all-pages/nav' as *;
+// Setting In All Pages 
+@use '../../in-all-pages/setting' as *;
+// Shapes triangle In All Pages 
+@use '../../in-all-pages/shapes-triangle' as *;
+
+@font-face {
+  font-family: quranFont;
+  src: url("../../../../Fonts/Quran/Quran\ karim\ 114.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--quranLightColor) !important;   
+} 
+// Start Surah
+.surah {
+  .container {
+    text-align: center;
+    p {
+      color: var(--darkColor);
+      line-height: 2;
+      font-family: 'Noto Kufi Arabic';
+      font-weight: bold;
+      span {
+        color: var(--colorTheme);
+      }
+    }
+  }
+}
+// End Surah

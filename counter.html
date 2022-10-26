@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سبح</title>
+    <!-- Add Photo To Link -->
+    <link rel="shortcut icon" type="image/png" href="Photos/muhammad.png">
+  <!-- main.css -->
+  <link rel="stylesheet" href="css/Scss/pages/Counter_Page/counter.css">
+  <link rel="stylesheet" href="css/main.scss">
+    <!-- bootStrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- fontsAwesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+  <!-- Fonts -->
+  <!-- Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Big Shoulders -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>  
+  <div class="layer position-absolute w-100 h-100" role="button">
+    <div class="text position-absolute">
+      <span class="close" role="button"><i class="fa-solid fa-circle-xmark"></i></span>
+      <span class="start fw-bold d-block">قال رسول الله صلي الله عليه و سلم:</span>
+      <div class="talking"></div>
+    </div>
+  </div>
+    <!-- Start Settings -->
+    <div class="setting position-fixed pt-5">
+      <span class="gear-span position-absolute d-flex justify-content-center align-items-center"><i class="fa-solid fa-gear fa-spin" role="button"></i></span>
+  
+      <div class="colors mt-3 pt-5 setting-content d-flex justify-content-center align-items-center flex-column">
+        <h3>الألوان</h3>
+        <ul class="style-list d-flex justify-content-center align-items-center">
+          <li class="active" role="button" data-color="red"></li>
+          <li class="" role="button" data-color="#2196f3"></li>
+          <li class="" role="button" data-color="#607d8b"></li>
+          <li class="" role="button" data-color="#009688"></li>
+          <li class="" role="button" data-color="#e91e63"></li>
+        </ul>
+      </div>
+      <hr class="w-50">
+      <div class="mode setting-content d-flex justify-content-center align-items-center flex-column">
+        <h3>السمة</h3>
+        <span class="mode-theme position-relative d-flex align-items-center">
+          <span class="round position-absolute d-block" role="button"></span>
+        </span>
+      </div>
+      <hr class="mt-4 w-50">
+    </div>
+    <!-- End Settings -->
+  
+    <!-- Start shapes -->
+    <img class="shapes-triangle position-fixed" src="Photos/shapes.png" alt="Shapes">
+    <!-- End shapes -->
+  
+    <!-- Start Nav -->
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg bg-light shadow-black">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#">كن مع الله</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link fw-bold active" aria-current="page" href="index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="#">أذكار</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="quran.html">قرأن</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="#">أحاديث</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" style="color: var(--colorTheme);" href="counter.html">تسبيح</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="#">مقتطفات إسلامية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="#">تفكر</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="#">قصص</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Nav -->
+
+  <div class="parent position-absolute">
+    <div class="zkr justify-content-center align-items-center fw-bold">
+      <span class="close" role="button"><i class="fa-solid fa-circle-xmark"></i></span>
+      <p class="m-0"></p>
+    </div>
+    
+    <div class="screen d-flex justify-content-end align-items-center">
+      <span class="fw-bold not-select">0</span>
+    </div>
+
+    <div class="r-d d-flex justify-content-between align-items-center">
+      <div class="reset position-relative" role="button"></div>
+      <div class="dark position-relative" role="button"></div>
+    </div>
+
+    <div class="count position-relative" role="button"></div>
+  </div>
+    <!-- main.js -->
+    <script src="js/pages/counter.js"></script>
+  <!-- bootStrap -->
+  <script src="js/bootstrap.bundle.min.js"></script> 
+  <!-- fontAwesome -->
+  <script src="js/all.min.js"></script>
+  </body>
+  </html>

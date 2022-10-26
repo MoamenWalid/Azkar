@@ -1,0 +1,132 @@
+// My FrameWork
+@use '../../helpers/frameWork' as *;
+// Variables In All Pages
+@use '../../helpers/variables' as *;
+// Navbar In All Pages
+@use '../../in-all-pages/nav' as *;
+// Setting In All Pages 
+@use '../../in-all-pages/setting' as *;
+// Shapes triangle In All Pages 
+@use '../../in-all-pages/shapes-triangle' as *;
+
+@font-face {
+  font-family: quranFont;
+  src: url("../../../../Fonts/Quran/Quran\ karim\ 114.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: var(--lightModeBackground);   
+  counter-reset: num;
+} 
+
+// Start QuranSurahs
+
+.container {
+  .photo {
+    width: 250px;
+    margin: 40px auto 0;
+    background: #fff;
+    padding: 30px;
+    border-radius: 50px;
+  }
+  font-family: var(--fontCairo);
+  .surahs {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    .surah {
+      position: relative;
+      cursor: pointer;
+      margin: 5px;
+      background-color: var(--darkColor);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      border: 3px solid var(--colorTheme);
+      transition: var(--secondTransition);
+      overflow: hidden;
+      &:hover {
+        transform: translateY(-5px);
+      }
+      .arabic-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--whiteColor);
+        > {
+          .name {
+            font-family: 'Noto Kufi Arabic', sans-serif;
+            font-weight: bold;
+          }
+  
+          .number-ayahs {
+            margin-top: 5px;
+            font-size: 11px;
+            font-weight: bold;
+            color: var(--colorTheme);
+          }
+        }
+      }
+  
+      .english-name {
+        position: relative;
+        margin-left: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--whiteColor);
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -60px;
+          background: var(--colorTheme);
+          width: 40px;
+          height: 40px;
+          transform: translateY(-50%) rotate(45deg);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+        }
+        &::after {
+          color: #fff;
+          font-size: large;
+          font-weight: bold;
+          counter-increment: num;
+          content: counter(num);
+          transform: translateY(-50%) rotate(0deg);
+        }
+        > {
+          .en-name {
+            font-size: large;
+            font-weight: bold;
+          }
+          .mean-name {
+            margin-top: 5px;
+            font-size: 11px;
+            font-weight: bold;
+            color: var(--colorTheme);
+          }
+        }
+      }
+      .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+      }
+    }
+  }
+}
+// End QuranSurahs
